@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service_center.name %>
+</p>
+
+<p>
+  <strong>Address 1:</strong>
+  <%= @service_center.address_1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @service_center.address_2 %>
+</p>
+
+<p>
+  <strong>Pin code:</strong>
+  <%= @service_center.pin_code %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @service_center.mobile %>
+</p>
+
+<p>
+  <strong>Center:</strong>
+  <%= @service_center.center_id %>
+</p>
+
+<%= link_to 'Edit', edit_service_center_path(@service_center) %> |
+<%= link_to 'Back', service_centers_path %>

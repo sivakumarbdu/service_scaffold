@@ -1,0 +1,35 @@
+<h1>Listing service_centers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>Pin code</th>
+      <th>Mobile</th>
+      <th>Center</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_centers.each do |service_center| %>
+      <tr>
+        <td><%= service_center.name %></td>
+        <td><%= service_center.address_1 %></td>
+        <td><%= service_center.address_2 %></td>
+        <td><%= service_center.pin_code %></td>
+        <td><%= service_center.mobile %></td>
+        <td><%= service_center.center_id %></td>
+        <td><%= link_to 'Show', service_center %></td>
+        <td><%= link_to 'Edit', edit_service_center_path(service_center) %></td>
+        <td><%= link_to 'Destroy', service_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service center', new_service_center_path %>
